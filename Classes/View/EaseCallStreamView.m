@@ -27,10 +27,11 @@
         
         self.bgView = [[UIImageView alloc] init];
         self.bgView.contentMode = UIViewContentModeScaleAspectFill;
+        self.bgView.backgroundColor = [UIColor blackColor];
         self.bgView.layer.cornerRadius = 10;
         self.bgView.clipsToBounds = YES;
         self.bgView.userInteractionEnabled = YES;
-        UIImage *image = [UIImage imageNamedFromBundle:@"icon"];
+        UIImage *image = [UIImage imageNamedFromBundle:@"icon--"];
         self.bgView.image = image;
         [self addSubview:self.bgView];
         [self.bgView mas_makeConstraints:^(MASConstraintMaker *make) {

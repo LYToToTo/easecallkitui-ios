@@ -48,7 +48,7 @@
     self.remoteNameLable = [[UILabel alloc] init];
     self.remoteNameLable.backgroundColor = [UIColor clearColor];
     self.remoteNameLable.font = [UIFont systemFontOfSize:24];
-    self.remoteNameLable.textColor = [UIColor whiteColor];
+    self.remoteNameLable.textColor = [UIColor blackColor];
     self.remoteNameLable.textAlignment = NSTextAlignmentRight;
     self.remoteNameLable.text = [[EaseCallManager sharedManager] getNicknameByUserName:self.remoteUid];
     [self.contentView addSubview:self.remoteNameLable];

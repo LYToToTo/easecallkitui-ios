@@ -26,7 +26,7 @@
         _isTalking = NO;
         
         self.bgView = [[UIImageView alloc] init];
-        self.bgView.contentMode = UIViewContentModeScaleAspectFit;
+        self.bgView.contentMode = UIViewContentModeScaleAspectFill;
         self.bgView.layer.cornerRadius = 10;
         self.bgView.clipsToBounds = YES;
         self.bgView.userInteractionEnabled = YES;

@@ -115,8 +115,8 @@
     self.microphoneButton.selected = NO;
     
     self.speakerButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.speakerButton setImage:[UIImage imageNamedFromBundle:@"speaker_disable"] forState:UIControlStateNormal];
-    [self.speakerButton setImage:[UIImage imageNamedFromBundle:@"speaker_enable"] forState:UIControlStateSelected];
+    [self.speakerButton setImage:[UIImage imageNamedFromBundle:@"ChangeVideo"] forState:UIControlStateNormal];
+    [self.speakerButton setImage:[UIImage imageNamedFromBundle:@"ChangeVideo"] forState:UIControlStateSelected];
     [self.speakerButton addTarget:self action:@selector(speakerAction) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:self.speakerButton];
     [self.speakerButton mas_makeConstraints:^(MASConstraintMaker *make) {

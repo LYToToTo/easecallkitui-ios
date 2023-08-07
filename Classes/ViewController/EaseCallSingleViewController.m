@@ -167,7 +167,7 @@
     if(self.type == EaseCallType1v1Audio) {
         // 音频
         [self.remoteHeadView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.width.height.equalTo(@80);
+            make.width.height.equalTo(@300);
             make.centerX.equalTo(self.contentView);
             make.top.equalTo(@230);
         }];
@@ -269,7 +269,7 @@
         self.localView.hidden = NO;
         self.viewRoundHead.hidden = YES;
         [self.remoteHeadView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.width.height.equalTo(@80);
+            make.width.height.equalTo(@300);
             make.centerX.equalTo(self.contentView);
             make.top.equalTo(@100);
         }];

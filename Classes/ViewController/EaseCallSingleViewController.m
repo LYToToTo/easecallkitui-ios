@@ -37,6 +37,7 @@
     self.contentView.backgroundColor = [UIColor whiteColor];
     NSURL* remoteUrl = [[EaseCallManager sharedManager] getHeadImageByUserName:self.remoteUid];
     self.remoteHeadView = [[UIImageView alloc] init];
+    self.remoteHeadView.contentMode = UIViewContentModeScaleAspectFit;
     [self.contentView addSubview:self.remoteHeadView];
     [self.remoteHeadView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.height.equalTo(@300);
@@ -183,7 +184,7 @@
         self.viewRoundHead.hidden = NO;
         [self.answerButton setImage:[UIImage imageNamedFromBundle:@"answer"] forState:UIControlStateNormal];
         [self.remoteNameLable mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.viewRoundHead.mas_bottom).with.offset(30);
+            make.top.equalTo(self.viewRoundHead.mas_bottom).with.offset(70);
             make.centerX.equalTo(self.contentView);
         }];
         if(_isConnected) {

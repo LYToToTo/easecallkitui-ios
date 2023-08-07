@@ -59,7 +59,7 @@
     self.miniButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.miniButton setImage:[UIImage imageNamedFromBundle:@"mini"] forState:UIControlStateNormal];
     [self.miniButton addTarget:self action:@selector(miniAction) forControlEvents:UIControlEventTouchUpInside];
-    self.miniButton.alpha = 0
+    self.miniButton.alpha = 0;
     [self.contentView addSubview:self.miniButton];
     [self.miniButton setTintColor:[UIColor whiteColor]];
     [self.miniButton mas_makeConstraints:^(MASConstraintMaker *make) {

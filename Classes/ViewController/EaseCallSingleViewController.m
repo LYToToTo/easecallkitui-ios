@@ -169,7 +169,7 @@
         [self.remoteHeadView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.width.height.equalTo(@300);
             make.centerX.equalTo(self.contentView);
-            make.top.equalTo(100);
+            make.top.equalTo(@100);
         }];
         self.switchToVoice.hidden = YES;
         self.switchToVoiceLable.hidden = YES;

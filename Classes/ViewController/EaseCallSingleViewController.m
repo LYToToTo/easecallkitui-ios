@@ -113,7 +113,7 @@
 }
 
 - (void)drawViewRoundHead
-{enableCameraLabel
+{
     _tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 325, 330, 30)];
     _tipLabel.backgroundColor = [UIColor blackColor];
     _tipLabel.layer.cornerRadius = 5;

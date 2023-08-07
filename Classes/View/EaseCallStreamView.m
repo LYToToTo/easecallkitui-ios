@@ -37,8 +37,8 @@
             //make.edges.equalTo(self);
             make.centerX.equalTo(self);
             make.centerY.equalTo(self).with.offset(-5);
-            make.width.lessThanOrEqualTo(@300);
-            make.height.lessThanOrEqualTo(@300);
+            make.width.equalTo(@300);
+            make.height.equalTo(@300);
         }];
         
         self.backgroundColor = [UIColor blackColor];
@@ -52,8 +52,8 @@
         }];
         
         self.nameLabel = [[UILabel alloc] init];
-        self.nameLabel.textColor = [UIColor whiteColor];
-        self.nameLabel.font = [UIFont systemFontOfSize:13];
+        self.nameLabel.textColor = [UIColor blackColor];
+        self.nameLabel.font = [UIFont boldSystemFontOfSize:13];
         self.nameLabel.textAlignment = NSTextAlignmentCenter;
         [self addSubview:self.nameLabel];
         [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {

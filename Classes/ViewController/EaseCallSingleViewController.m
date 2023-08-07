@@ -59,7 +59,7 @@
     self.statusLable = [[UILabel alloc] init];
     self.statusLable.backgroundColor = [UIColor clearColor];
     self.statusLable.font = [UIFont systemFontOfSize:15];
-    self.statusLable.textColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+    self.statusLable.textColor = [UIColor grayColor];
     self.statusLable.textAlignment = NSTextAlignmentRight;
     [self.contentView addSubview:self.statusLable];
     [self.statusLable mas_makeConstraints:^(MASConstraintMaker *make) {

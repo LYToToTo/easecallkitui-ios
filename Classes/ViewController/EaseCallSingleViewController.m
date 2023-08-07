@@ -34,7 +34,7 @@
         self.remoteView = [[EaseCallStreamView alloc] init];
         [self setRemoteDisplayView:[UIView new] enableVideo:YES];
     }
-    self.contentView.backgroundColor = [UIColor grayColor];
+    self.contentView.backgroundColor = [UIColor whiteColor];
     NSURL* remoteUrl = [[EaseCallManager sharedManager] getHeadImageByUserName:self.remoteUid];
     self.remoteHeadView = [[UIImageView alloc] init];
     [self.contentView addSubview:self.remoteHeadView];
@@ -113,48 +113,7 @@
 }
 
 - (void)drawViewRoundHead
-{
-    self.viewRoundHead = [[UIView alloc] init];
-    self.viewRoundHead.layer.backgroundColor = [UIColor colorWithRed:160/255.0 green:160/255.0 blue:160/255.0 alpha:1.0].CGColor;
-    self.viewRoundHead.layer.shadowColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.02].CGColor;
-    self.viewRoundHead.layer.shadowOffset = CGSizeMake(0,0);
-    self.viewRoundHead.layer.shadowOpacity = 1;
-    self.viewRoundHead.layer.shadowRadius = 15;
-    self.viewRoundHead.layer.cornerRadius = 119;
-    [self.contentView addSubview:self.viewRoundHead];
-    [self.viewRoundHead mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.center.equalTo(self.remoteHeadView);
-            make.width.height.equalTo(@238);
-    }];
-    
-    UIView* view2 = [[UIView alloc] init];
-    view2.layer.backgroundColor = [UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:1.0].CGColor;
-    view2.layer.shadowColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.04].CGColor;
-    view2.layer.shadowOffset = CGSizeMake(0,0);
-    view2.layer.shadowOpacity = 1;
-    view2.layer.shadowRadius = 12;
-    view2.layer.cornerRadius = 90;
-    [self.viewRoundHead addSubview:view2];
-    [view2 mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.center.equalTo(self.viewRoundHead);
-            make.width.height.equalTo(@179);
-    }];
-    
-    UIView* view3 = [[UIView alloc] init];
-    view3.layer.backgroundColor = [UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1.0].CGColor;
-    view3.layer.shadowColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.04].CGColor;
-    view3.layer.shadowOffset = CGSizeMake(0,0);
-    view3.layer.shadowOpacity = 1;
-    view3.layer.shadowRadius = 12;
-    view3.layer.cornerRadius = 65;
-    [view2 addSubview:view3];
-    [view3 mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.center.equalTo(self.viewRoundHead);
-            make.width.height.equalTo(@129);
-    }];
-    
-    [self.contentView sendSubviewToBack:self.viewRoundHead];
-    
+{enableCameraLabel
     _tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 325, 330, 30)];
     _tipLabel.backgroundColor = [UIColor blackColor];
     _tipLabel.layer.cornerRadius = 5;

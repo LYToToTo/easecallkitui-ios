@@ -148,6 +148,7 @@
     self.hangupLabel.textColor = [UIColor whiteColor];
     self.hangupLabel.textAlignment = NSTextAlignmentCenter;
     self.hangupLabel.text = EaseCallLocalizableString(@"Huangup",nil);
+    self.hangupLabel.alpha = 0;
     [self.contentView addSubview:self.hangupLabel];
     [self.hangupLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.hangupButton.mas_bottom).with.offset(5);
@@ -170,6 +171,7 @@
     self.microphoneLabel.textColor = [UIColor whiteColor];
     self.microphoneLabel.textAlignment = NSTextAlignmentCenter;
     self.microphoneLabel.text = EaseCallLocalizableString(@"Mute",nil);
+    self.microphoneLabel.alpha = 0;
     [self.contentView addSubview:self.microphoneLabel];
     [self.microphoneLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.microphoneButton.mas_bottom).with.offset(5);
@@ -181,6 +183,7 @@
     self.speakerLabel.textColor = [UIColor whiteColor];
     self.speakerLabel.textAlignment = NSTextAlignmentCenter;
     self.speakerLabel.text = EaseCallLocalizableString(@"Hands-free",nil);
+    self.speakerLabel.alpha = 0;
     [self.contentView addSubview:self.speakerLabel];
     [self.speakerLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.speakerButton.mas_bottom).with.offset(5);
@@ -192,6 +195,7 @@
     self.enableCameraLabel.textColor = [UIColor whiteColor];
     self.enableCameraLabel.textAlignment = NSTextAlignmentCenter;
     self.enableCameraLabel.text = EaseCallLocalizableString(@"Camera",nil);
+    self.enableCameraLabel.alpha = 0;
     [self.contentView addSubview:self.enableCameraLabel];
     [self.enableCameraLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.enableCameraButton.mas_bottom).with.offset(5);
@@ -203,6 +207,7 @@
     self.switchCameraLabel.textColor = [UIColor whiteColor];
     self.switchCameraLabel.textAlignment = NSTextAlignmentCenter;
     self.switchCameraLabel.text = EaseCallLocalizableString(@"SwitchCamera",nil);
+    self.switchCameraLabel.alpha = 0;
     [self.contentView addSubview:self.switchCameraLabel];
     [self.switchCameraLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.switchCameraButton.mas_bottom).with.offset(5);

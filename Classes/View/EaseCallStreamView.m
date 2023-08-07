@@ -27,6 +27,8 @@
         
         self.bgView = [[UIImageView alloc] init];
         self.bgView.contentMode = UIViewContentModeScaleAspectFit;
+        self.bgView.layer.cornerRadius = 10;
+        self.bgView.clipsToBounds = YES;
         self.bgView.userInteractionEnabled = YES;
         UIImage *image = [UIImage imageNamedFromBundle:@"icon"];
         self.bgView.image = image;
@@ -35,8 +37,8 @@
             //make.edges.equalTo(self);
             make.centerX.equalTo(self);
             make.centerY.equalTo(self).with.offset(-5);
-            make.width.lessThanOrEqualTo(@70);
-            make.height.lessThanOrEqualTo(@70);
+            make.width.lessThanOrEqualTo(@300);
+            make.height.lessThanOrEqualTo(@300);
         }];
         
         self.backgroundColor = [UIColor blackColor];

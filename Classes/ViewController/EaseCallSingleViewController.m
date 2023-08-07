@@ -39,7 +39,7 @@
     self.remoteHeadView = [[UIImageView alloc] init];
     [self.contentView addSubview:self.remoteHeadView];
     [self.remoteHeadView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.height.equalTo(@80);
+        make.width.height.equalTo(@300);
         make.centerX.equalTo(self.contentView);
         make.top.equalTo(@100);
     }];

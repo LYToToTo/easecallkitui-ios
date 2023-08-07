@@ -114,6 +114,14 @@
 
 - (void)drawViewRoundHead
 {
+    self.viewRoundHead = [[UIView alloc] init];
+    self.viewRoundHead.layer.backgroundColor = [UIColor colorWithRed:160/255.0 green:160/255.0 blue:160/255.0 alpha:0].CGColor;
+    [self.contentView addSubview:self.viewRoundHead];
+    [self.viewRoundHead mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(self.remoteHeadView);
+            make.width.height.equalTo(@238);
+    }];
+    
     _tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 325, 330, 30)];
     _tipLabel.backgroundColor = [UIColor blackColor];
     _tipLabel.layer.cornerRadius = 5;
